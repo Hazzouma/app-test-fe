@@ -16,12 +16,15 @@ jobs:
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: 'yarn'
 
-      - name: Install yarn globally
+      - name: Install yarn CLI
         run: npm install -g yarn
 
-      - name: Set Yarn to Berry version
-        run: yarn set version berry
+      - name: Set Yarn to version 4.18.1 (Berry)
+        run: yarn set version 4.18.1
 
       - name: Verify Yarn version
         run: yarn --version
