@@ -18,10 +18,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '24'
-          cache: 'yarn'
+          cache: 'npm'
 
-      - name: Install Yarn Berry 4.18.1 globally
-        run: yarn set version berry
+      - name: Install Yarn Berry 4.18.1 globally using npm
+        run: npm install -g yarn@4.18.1
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
