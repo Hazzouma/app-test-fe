@@ -20,8 +20,8 @@ jobs:
           node-version: '24'
           cache: 'yarn'
 
-      - name: Install Yarn Berry via corepack
-        run: corepack enable yarn && corepack prepare yarn@4.5.1 --activate
+      - name: Set Yarn to Berry version
+        run: yarn set version berry
 
       - name: Verify Yarn version
         run: yarn --version
