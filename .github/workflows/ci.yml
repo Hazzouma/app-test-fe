@@ -20,15 +20,11 @@ jobs:
           node-version: '24'
           cache: 'yarn'
 
-      - name: Install Yarn Berry
-        run: npm install -g yarn@berry
+      - name: Install Yarn Berry via corepack
+        run: corepack enable yarn && corepack prepare yarn@4.5.1 --activate
 
-      - name: Configure Yarn Berry
-        run: |
-          echo "yarnPath: .yarn/releases/yarn-4.18.1.cjs" >> .yarnrc.yml
-          mkdir -p .yarn/releases
-          curl -Lo .yarn/releases/yarn-4.18.1.cjs https://repo.yarnpkg.com/4.18.1/packages/yarnpkg-cli/bin/yarn.js
-          chmod +x .yarn/releases/yarn-4.18.1.cjs
+      - name: Verify Yarn version
+        run: yarn --version
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
