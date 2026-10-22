@@ -1,4 +1,3 @@
-import React from 'react';
 import { render, screen } from '@testing-library/react';
 import FeedPage from './FeedPage';
 
@@ -13,7 +12,7 @@ describe('FeedPage Component', () => {
     // Check if create post box is rendered
     expect(screen.getByPlaceholderText(/What's on your mind/i)).toBeInTheDocument();
     
-    // Check if at least one post is rendered
+    // Check if at least one post is rendered - using actual content from samplePosts
     expect(screen.getByText(/Just finished an amazing hiking trip/i)).toBeInTheDocument();
   });
 });

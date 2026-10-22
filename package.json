@@ -6,6 +6,7 @@
   "packageManager": "npm@10.9.2",
   "devDependencies": {
     "@eslint/js": "^9.34.0",
+    "@testing-library/jest-dom": "^7.0.1",
     "@testing-library/react": "^16.3.3",
     "@types/jest": "^30.0.0",
     "@types/react": "^19.3.0",
@@ -14,6 +15,9 @@
     "eslint": "^9.34.0",
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.18",
+    "jest": "^30.5.2",
+    "jest-environment-jsdom": "^30.5.2",
+    "ts-jest": "^29.4.15",
     "typescript": "^5.8.2",
     "vite": "^8.3.4"
   },
@@ -22,7 +26,8 @@
     "build": "tsc && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "test": "jest"
   },
   "dependencies": {
     "react": "^19.3.0",

@@ -1,4 +1,3 @@
-import React from 'react';
 import { render, screen } from '@testing-library/react';
 import FeedPost from './FeedPost';
 
@@ -50,7 +49,7 @@ describe('FeedPost Component', () => {
   it('renders comments section', () => {
     render(<FeedPost {...mockPost} />);
     
-    const commentSection = screen.getByText(/Write a comment/i);
+    const commentSection = screen.getByPlaceholderText(/Write a comment\.\.\./i);
     expect(commentSection).toBeInTheDocument();
   });
 });

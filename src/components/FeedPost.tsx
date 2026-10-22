@@ -8,7 +8,6 @@ const FeedPost: React.FC<FeedPostProps> = ({
   content, 
   timestamp,
   likes = 0,
-  comments = 0,
   onLike,
   onComment
 }) => {
