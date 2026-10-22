@@ -31,6 +31,8 @@ npm run type-check
 - `npm run build` - Build for production
 - `npm run preview` - Preview production build
 - `npm run type-check` - Run TypeScript type checking
+- `npm run test` - Run tests with Jest
+- `npm run lint` - Run ESLint for code quality
 
 ## Project Structure
 
@@ -39,6 +41,8 @@ npm run type-check
 ├── package.json            # Dependencies and scripts
 ├── tsconfig.json           # TypeScript configuration
 ├── vite.config.ts          # Vite configuration
+├── eslint.config.js        # ESLint configuration
+├── jest.config.ts          # Jest configuration
 ├── src/
 │   ├── App.tsx             # Main React component
 │   ├── main.tsx            # Application entry point
@@ -65,6 +69,22 @@ npm run build
 ```
 
 The built files will be in the `dist/` directory.
+
+## Testing
+
+Run tests with Jest:
+
+```bash
+npm run test
+```
+
+## Linting
+
+Run ESLint for code quality checks:
+
+```bash
+npm run lint
+```
 
 ## License
 

@@ -42,6 +42,18 @@ const samplePosts: Post[] = [
 ];
 
 const FeedPage: React.FC = () => {
+  // Handle like action
+  const handleLike = (postId: number, newLikeCount: number) => {
+    console.log(`Post ${postId} liked. New count: ${newLikeCount}`);
+    // In a real app, this would update the backend or local state
+  };
+
+  // Handle comment action
+  const handleComment = (postId: number, commentText: string) => {
+    console.log(`New comment on post ${postId}: ${commentText}`);
+    // In a real app, this would update the backend or local state
+  };
+
   return (
     <div className="feed-page">
       {/* Page Header */}
@@ -70,7 +82,12 @@ const FeedPage: React.FC = () => {
       {/* Feed Posts */}
       <main className="feed-main">
         {samplePosts.map((post) => (
-          <FeedPost key={post.id} {...post} />
+          <FeedPost 
+            key={post.id} 
+            {...post} 
+            onLike={handleLike}
+            onComment={handleComment}
+          />
         ))}
       </main>
 

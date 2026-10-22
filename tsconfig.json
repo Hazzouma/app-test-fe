@@ -30,5 +30,5 @@
     "jsx": "react-jsx",
     "esModuleInterop": true
   },
-  "include": ["src"]
+  "include": ["src", "src/setupTests.ts"]
 }

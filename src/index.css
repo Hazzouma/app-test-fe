@@ -266,6 +266,28 @@ p {
   background-color: #166fe5;
 }
 
+/* Comment items */
+.comment-item {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.comment-item:last-child {
+  border-bottom: none;
+}
+
+.comment-author {
+  font-weight: 600;
+  color: #050505;
+  margin-right: 4px;
+}
+
+.comment-text {
+  color: #050505;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
 /* Load More Button */
 .load-more-container {
   text-align: center;
